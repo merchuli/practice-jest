@@ -6,3 +6,10 @@ practice unit test: jest
 2. Add js sample `functions.js`
 3. Add spec/test sample `functions.spec.js` (it can also be named as `functions.test.js`)
 4. Run `npm run test` to get the result of tests
+
+
+
+
+
+## Reference
+[1] https://youtu.be/7r4xVDI2vho
