@@ -12,4 +12,4 @@ practice unit test: jest
 
 
 ## Reference
-[1] https://youtu.be/7r4xVDI2vho
+[1] https://youtu.be/7r4xVDI2vho?t=740
