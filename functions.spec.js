@@ -1,6 +1,6 @@
 const functions = require('./functions');
 
-// matcher: toBe
+// matcher: toBe (for primitive types)
 test('Add 2 and 3 equal to 5', () => {
   expect(functions.add(2, 3)).toBe(5);
 });
@@ -8,6 +8,11 @@ test('Add 2 and 3 equal to 5', () => {
 // matcher: not
 test('Add 2 and 3 not equal to 6', () => {
   expect(functions.add(2, 3)).not.toBe(6);
+});
+
+// matcher: toEqual (for object types: Object, Array...)
+test('User should be object', () => {
+  expect(functions.createUser()).toEqual({firstName: 'Merchu', lastName: 'Liang'});
 });
 
 // matcher: toBeNull
