@@ -46,3 +46,15 @@ test('Should be truthy', () => {
   expect(functions.checkValue(true)).toBeTruthy();
   expect(functions.checkValue(2)).toBeTruthy();
 });
+
+
+/** Numbers */
+// matcher: toBeLessThan, toBeLessThanOrEqual
+test('Should be under 1600', () => {
+  const expected = 1600;
+  const price1 = 700;
+  const price2 = 800;
+
+  expect(price1 + price2).toBeLessThan(expected);
+  expect(price2*2).toBeLessThanOrEqual(expected);
+});
