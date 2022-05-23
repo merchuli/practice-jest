@@ -1,12 +1,12 @@
 const functions = require('./functions');
 
 // matcher: toBe (for primitive types)
-test('Add 2 and 3 equal to 5', () => {
+test('Add 2 and 3 should be equal to 5', () => {
   expect(functions.add(2, 3)).toBe(5);
 });
 
 // matcher: not
-test('Add 2 and 3 not equal to 6', () => {
+test('Add 2 and 3 should not be equal to 6', () => {
   expect(functions.add(2, 3)).not.toBe(6);
 });
 
@@ -57,4 +57,13 @@ test('Should be under 1600', () => {
 
   expect(price1 + price2).toBeLessThan(expected);
   expect(price2*2).toBeLessThanOrEqual(expected);
+});
+
+/** Regular Expression(regex) */
+test('There is no I in team (sensitive)', () => {
+  expect('team').not.toMatch(/I/);
+});
+
+test('There is I in ice (insensitive)', () => {
+  expect('ice').toMatch(/I/i);
 });
