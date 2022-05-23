@@ -1,5 +1,10 @@
 const functions = require('./functions');
 
+/**
+ * #Using Matchers
+ * https://jestjs.io/docs/using-matchers
+ * */
+
 // matcher: toBe (for primitive types)
 test('Add 2 and 3 should be equal to 5', () => {
   expect(functions.add(2, 3)).toBe(5);
@@ -59,7 +64,8 @@ test('Should be under 1600', () => {
   expect(price2*2).toBeLessThanOrEqual(expected);
 });
 
-/** Regular Expression(regex) */
+
+/** Regular Expression(regex) - toMatch */
 test('There is no I in team (sensitive)', () => {
   expect('team').not.toMatch(/I/);
 });
@@ -67,3 +73,18 @@ test('There is no I in team (sensitive)', () => {
 test('There is I in ice (insensitive)', () => {
   expect('ice').toMatch(/I/i);
 });
+
+
+/** Arrays and iterables - toContain */
+test('Admin should be in usernames', () => {
+  const usernames = ['Merchu', 'Betty', 'Admin'];
+  expect(usernames).toContain('Admin');
+});
+
+/** Iterables - toContain */
+test('Admin should be in usernames', () => {
+  const usernames = ['Merchu', 'Betty', 'Admin'];
+  expect(new Set(usernames)).toContain('Admin');
+});
+
+
